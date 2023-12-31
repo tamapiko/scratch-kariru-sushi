@@ -130,7 +130,7 @@
     <div class="artwork">
       <p>細かな調整は管理用で行えます。寿司のオーダーと管理が簡単にできるアプリです。</p>
       <button class="button" onclick="openArtwork('order_app.html')">動作確認をする</button>
-      <button class="button" onclick="downloadFile('sample_data_order_app.txt')">ファイルをダウンロードする</button>
+      <button class="button" onclick="downloadFile('sample_data_order_app.zip')">ファイルをダウンロードする</button>
     </div>
   </section>
 
@@ -139,7 +139,7 @@
     <div class="artwork">
       <p>注文データの管理が行えるアプリです。未処理の注文に✓のマークを付けたり、処理済みにすることができます。</p>
       <button class="button" onclick="openArtwork('order_admin.html')">動作確認をする</button>
-      <button class="button" onclick="downloadFile('sample_data_order_admin.txt')">ファイルをダウンロードする</button>
+      <button class="button" onclick="downloadFile('sample_data_order_admin.zip')">ファイルをダウンロードする</button>
     </div>
   </section>
 
@@ -148,7 +148,7 @@
     <div class="artwork">
       <p>お会計の時にレジ用の端末に値段が表示される便利なアプリです。</p>
       <button class="button" onclick="openArtwork('order_register.html')">動作確認をする</button>
-      <button class="button" onclick="downloadFile('sample_data_order_register.txt')">ファイルをダウンロードする</button>
+      <button class="button" onclick="downloadFile('sample_data_order_register.zip')">ファイルをダウンロードする</button>
     </div>
   </section>
 
@@ -156,7 +156,7 @@
     <h2>寿司注文アプリプログラムデータ</h2>
     <div class="artwork">
       <p>寿司注文アプリのプログラムデータをダウンロードできます。</p>
-      <button class="button" onclick="downloadProgramData('sushi_order_app_v1.sb3')">動作確認をする</button>
+      <button class="button" onclick="downloadProgramData('sushi_order_app_v1.zip')">ダウンロード</button>
     </div>
   </section>
 
@@ -171,7 +171,7 @@
 
     function downloadFile(filename) {
       const dataContent = 'これはサンプルデータです。実際のデータに置き換えてください。';
-      const blob = new Blob([dataContent], { type: 'text/plain' });
+      const blob = new Blob([dataContent], { type: 'application/zip' });
       const link = document.createElement('a');
       link.href = window.URL.createObjectURL(blob);
       link.download = filename;
@@ -182,4 +182,8 @@
     }
 
     function downloadProgramData(filename) {
-      window.location.href = 'https://tamapiko.github.io/scratch-kariru/' + 
+      window.location.href = 'https://tamapiko.github.io/scratch-kariru/' + filename;
+    }
+  </script>
+</body>
+</html>
