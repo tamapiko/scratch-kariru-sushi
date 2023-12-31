@@ -32,7 +32,7 @@
       display: inline-block; /* セクションを横に並べる */
       margin: 20px;
       padding: 20px;
-      background-color: #fff;
+      background-color: #d84315; /* 寿司カラーに変更 */
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       width: calc(33.33% - 40px); /* 画面幅に対して33.33%の幅に設定 */
@@ -51,29 +51,70 @@
       border-radius: 8px;
     }
 
-    button {
+    .button {
+      position: relative;
+      overflow: hidden;
       padding: 10px 20px;
       font-size: 16px;
       cursor: pointer;
-      background-color: #d84315; /* 寿司カラーに変更 */
-      color: #fff;
+      background-color: #fff; /* 背景色を白に変更 */
+      color: #d84315; /* テキスト色を寿司カラーに変更 */
       border: none;
-      border-radius: 4px;
+      border-radius: 5px; /* 追加 */
+
+      &:before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        border-radius: 5px; /* 追加 */
+        left: 2px;
+        top: 1px;
+        background-color: #d84315; /* 寿司カラーに変更 */
+        transform: scaleX(0);
+        transform-origin: 0% 50%;
+        transition: transform 0.3s ease;
+      }
+
+      &:hover:before {
+        transform: scaleX(1);
+      }
     }
 
-    footer {
-      text-align: center;
-      padding: 1em 0;
-      background-color: #d84315; /* 寿司カラーに変更 */
-      color: #fff;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
+    .button-3 {
+      font-size: 1.5em;
+      border: none;
+      text-shadow: 2px 2px 0 #d84315; /* 寿司カラーに変更 */
+      &:before {
+        content: none;
+      }
     }
 
-    @media (max-width: 768px) {
-      section {
-        width: calc(100% - 40px);
+    .button-4 {
+      position: relative;
+      overflow: hidden;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #fff; /* 背景色を白に変更 */
+      color: #d84315; /* テキスト色を寿司カラーに変更 */
+      border: none;
+      border-radius: 100em; /* 追加 */
+
+      &:before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        border-radius: 100em; /* 追加 */
+        left: -1px;
+        top: -1px;
+        background-color: #d84315; /* 寿司カラーに変更 */
+        transform: scaleX(0);
+        transform-origin: 0% 50%;
+        transition: transform 0.3s ease;
+      }
+
+      &:hover:before {
+        transform: scaleX(1);
       }
     }
   </style>
@@ -88,7 +129,8 @@
     <h2>寿司注文アプリ（購入/管理）</h2>
     <div class="artwork">
       <p>細かな調整は管理用で行えます。寿司のオーダーと管理が簡単にできるアプリです。</p>
-      <button onclick="openArtwork('order_app.html')">作品を表示</button>
+      <button class="button" onclick="openArtwork('order_app.html')">動作確認をする</button>
+      <button class="button" onclick="downloadFile('sample_data_order_app.txt')">ファイルをダウンロードする</button>
     </div>
   </section>
 
@@ -96,7 +138,8 @@
     <h2>寿司注文アプリ管理用</h2>
     <div class="artwork">
       <p>注文データの管理が行えるアプリです。未処理の注文に✓のマークを付けたり、処理済みにすることができます。</p>
-      <button onclick="openArtwork('order_admin.html')">作品を表示</button>
+      <button class="button" onclick="openArtwork('order_admin.html')">動作確認をする</button>
+      <button class="button" onclick="downloadFile('sample_data_order_admin.txt')">ファイルをダウンロードする</button>
     </div>
   </section>
 
@@ -104,7 +147,8 @@
     <h2>寿司注文アプリレジ用</h2>
     <div class="artwork">
       <p>お会計の時にレジ用の端末に値段が表示される便利なアプリです。</p>
-      <button onclick="openArtwork('order_register.html')">作品を表示</button>
+      <button class="button" onclick="openArtwork('order_register.html')">動作確認をする</button>
+      <button class="button" onclick="downloadFile('sample_data_order_register.txt')">ファイルをダウンロードする</button>
     </div>
   </section>
 
@@ -112,7 +156,7 @@
     <h2>寿司注文アプリプログラムデータ</h2>
     <div class="artwork">
       <p>寿司注文アプリのプログラムデータをダウンロードできます。</p>
-      <button onclick="downloadProgramData('sushi_order_app_v1.sb3')">ダウンロード</button>
+      <button class="button" onclick="downloadProgramData('sushi_order_app_v1.sb3')">動作確認をする</button>
     </div>
   </section>
 
@@ -123,6 +167,18 @@
   <script>
     function openArtwork(filename) {
       window.location.href = 'https://tamapiko.github.io/scratch-kariru/' + filename;
+    }
+
+    function downloadFile(filename) {
+      const dataContent = 'これはサンプルデータです。実際のデータに置き換えてください。';
+      const blob = new Blob([dataContent], { type: 'text/plain' });
+      const link = document.createElement('a');
+      link.href = window.URL.createObjectURL(blob);
+      link.download = filename;
+
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
     }
 
     function downloadProgramData(filename) {
