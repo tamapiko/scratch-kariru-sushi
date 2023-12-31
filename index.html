@@ -89,7 +89,7 @@
   <section>
     <h2>寿司注文アプリ管理用</h2>
     <div class="artwork">
-      <p>注文データや在庫の管理が行えるアプリです。未処理の注文に✓のマークを付けたり、処理済みにすることができます。</p>
+      <p>注文データの管理が行えるアプリです。未処理の注文に✓のマークを付けたり、処理済みにすることができます。</p>
       <button onclick="openArtwork('order_admin.html')">作品を表示</button>
     </div>
   </section>
@@ -97,8 +97,16 @@
   <section>
     <h2>寿司注文アプリレジ用</h2>
     <div class="artwork">
-      <p>レジ業務をサポートするアプリです。便利な機能が豊富に揃っています。</p>
+      <p>お会計の時にレジ用の端末に値段が表示される便利なアプリです。</p>
       <button onclick="openArtwork('order_register.html')">作品を表示</button>
+    </div>
+  </section>
+
+  <section>
+    <h2>寿司注文アプリプログラムデータ</h2>
+    <div class="artwork">
+      <p>寿司注文アプリのプログラムデータをダウンロードできます。</p>
+      <button onclick="downloadProgramData('sushi_order_app_v1.sb3')">ダウンロード</button>
     </div>
   </section>
 
@@ -108,6 +116,10 @@
 
   <script>
     function openArtwork(filename) {
+      window.location.href = 'https://tamapiko.github.io/scratch-kariru/' + filename;
+    }
+
+    function downloadProgramData(filename) {
       window.location.href = 'https://tamapiko.github.io/scratch-kariru/' + filename;
     }
   </script>
