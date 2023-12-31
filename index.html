@@ -28,12 +28,6 @@
       margin: 0;
     }
 
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-    }
-
     section {
       margin: 20px;
       padding: 20px;
@@ -41,7 +35,9 @@
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       box-sizing: border-box;
-      width: calc(33.33% - 40px); /* 画面幅に対して33.33%の幅に設定 */
+      width: 80%; /* 画面幅に対して80%の幅に設定 */
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .artwork {
@@ -130,44 +126,40 @@
     <p>さまざまな寿司アプリをお楽しみください</p>
   </header>
 
-  <div class="container">
+  <section>
+    <h2>寿司注文アプリ（購入/管理）</h2>
+    <div class="artwork">
+      <p>細かな調整は管理用で行えます。寿司のオーダーと管理が簡単にできるアプリです。</p>
+      <button class="button" onclick="openArtwork('order_app.html')">動作確認をする</button>
+      <button class="button" onclick="downloadFile('sample_data_order_app.zip')">ファイルをダウンロードする</button>
+    </div>
+  </section>
 
-    <section>
-      <h2>寿司注文アプリ（購入/管理）</h2>
-      <div class="artwork">
-        <p>細かな調整は管理用で行えます。寿司のオーダーと管理が簡単にできるアプリです。</p>
-        <button class="button" onclick="openArtwork('order_app.html')">動作確認をする</button>
-        <button class="button" onclick="downloadFile('sample_data_order_app.zip')">ファイルをダウンロードする</button>
-      </div>
-    </section>
+  <section>
+    <h2>寿司注文アプリ管理用</h2>
+    <div class="artwork">
+      <p>注文データの管理が行えるアプリです。未処理の注文に✓のマークを付けたり、処理済みにすることができます。</p>
+      <button class="button" onclick="openArtwork('order_admin.html')">動作確認をする</button>
+      <button class="button" onclick="downloadFile('sample_data_order_admin.zip')">ファイルをダウンロードする</button>
+    </div>
+  </section>
 
-    <section>
-      <h2>寿司注文アプリ管理用</h2>
-      <div class="artwork">
-        <p>注文データの管理が行えるアプリです。未処理の注文に✓のマークを付けたり、処理済みにすることができます。</p>
-        <button class="button" onclick="openArtwork('order_admin.html')">動作確認をする</button>
-        <button class="button" onclick="downloadFile('sample_data_order_admin.zip')">ファイルをダウンロードする</button>
-      </div>
-    </section>
+  <section>
+    <h2>寿司注文アプリレジ用</h2>
+    <div class="artwork">
+      <p>お会計の時にレジ用の端末に値段が表示される便利なアプリです。</p>
+      <button class="button" onclick="openArtwork('order_register.html')">動作確認をする</button>
+      <button class="button" onclick="downloadFile('sample_data_order_register.zip')">ファイルをダウンロードする</button>
+    </div>
+  </section>
 
-    <section>
-      <h2>寿司注文アプリレジ用</h2>
-      <div class="artwork">
-        <p>お会計の時にレジ用の端末に値段が表示される便利なアプリです。</p>
-        <button class="button" onclick="openArtwork('order_register.html')">動作確認をする</button>
-        <button class="button" onclick="downloadFile('sample_data_order_register.zip')">ファイルをダウンロードする</button>
-      </div>
-    </section>
-
-    <section>
-      <h2>寿司注文アプリプログラムデータ</h2>
-      <div class="artwork">
-        <p>寿司注文アプリのプログラムデータをダウンロードできます。</p>
-        <button class="button" onclick="downloadProgramData('sushi_order_app_v1.zip')">ダウンロード</button>
-      </div>
-    </section>
-
-  </div>
+  <section>
+    <h2>寿司注文アプリプログラムデータ</h2>
+    <div class="artwork">
+      <p>寿司注文アプリのプログラムデータをダウンロードできます。</p>
+      <button class="button" onclick="downloadProgramData('sushi_order_app_v1.zip')">ダウンロード</button>
+    </div>
+  </section>
 
   <footer>
     <p></p>
