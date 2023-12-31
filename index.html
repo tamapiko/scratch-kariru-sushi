@@ -56,7 +56,10 @@
       padding: 10px 20px;
       font-size: 16px;
       cursor: pointer;
-      color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      background-color: #4fc3f7; /* ボタンの背景色を水色に変更 */
 
       &:before {
         content: '';
@@ -65,6 +68,7 @@
         border-radius: 5px;
         left: 2px;
         top: 1px;
+        background-color: #333;
         transform: scaleX(0);
         transform-origin: 0% 50%;
         transition: transform 0.3s ease;
@@ -76,32 +80,17 @@
     }
 
     .button-1 {
-      background-color: #fff;
-      border: 1px solid #333;
-      border-radius: 5px;
-      &:before {
-        background-color: #333;
-      }
+      color: #333;
     }
 
     .button-2 {
-      background-color: #4fc3f7;
-      border: 1px solid #4fc3f7;
-      border-radius: 5px;
-      color: #fff;
-      &:before {
-        background-color: #4fc3f7;
-      }
+      color: #333;
+      background-color: #4fc3f7; /* ボタンの背景色を水色に変更 */
     }
 
     .button-3 {
-      background-color: #333;
       color: #fff;
-      border: 1px solid #333;
-      border-radius: 5px;
-      &:before {
-        background-color: #fff;
-      }
+      background-color: #4fc3f7; /* ボタンの背景色を水色に変更 */
     }
   </style>
 </head>
