@@ -29,11 +29,14 @@
     }
 
     section {
+      display: inline-block; /* セクションを横に並べる */
       margin: 20px;
       padding: 20px;
       background-color: #fff;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: calc(33.33% - 40px); /* 画面幅に対して33.33%の幅に設定 */
+      box-sizing: border-box;
     }
 
     .artwork {
