@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>寿司アプリ作品紹介</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+      color: #333;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1em 0;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    header p {
+      margin: 0;
+    }
+
+    section {
+      margin: 20px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .artwork {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .artwork img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1em 0;
+      background-color: #333;
+      color: #fff;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>寿司アプリ作品紹介</h1>
+    <p>さまざまな寿司アプリをお楽しみください</p>
+  </header>
+
+  <section>
+    <h2>寿司注文アプリ（購入/管理）</h2>
+    <div class="artwork">
+      <img src="sushi_order_app.jpg" alt="寿司注文アプリ">
+      <p>細かな調整は管理用で行えます。寿司のオーダーと管理が簡単にできるアプリです。</p>
+      <button onclick="openArtwork('order_app.html')">作品を表示</button>
+    </div>
+  </section>
+
+  <section>
+    <h2>寿司注文アプリ管理用</h2>
+    <div class="artwork">
+      <img src="sushi_order_admin.jpg" alt="寿司注文アプリ管理用">
+      <p>注文データや在庫の管理が行えるアプリです。未処理の注文に✓のマークを付けたり、処理済みにすることができます。</p>
+      <button onclick="openArtwork('order_admin.html')">作品を表示</button>
+    </div>
+  </section>
+
+  <section>
+    <h2>寿司注文アプリレジ用</h2>
+    <div class="artwork">
+      <img src="sushi_order_register.jpg" alt="寿司注文アプリレジ用">
+      <p>レジ業務をサポートするアプリです。便利な機能が豊富に揃っています。</p>
+      <button onclick="openArtwork('order_register.html')">作品を表示</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 寿司アプリ作品紹介</p>
+  </footer>
+
+  <script>
+    function openArtwork(filename) {
+      window.location.href = 'https://tamapiko.github.io/sushi-ordering-app/' + filename;
+    }
+  </script>
+</body>
+</html>
