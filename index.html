@@ -9,12 +9,12 @@
       font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f8f8f8;
+      background-color: #ffe0b2; /* 寿司カラーに変更 */
       color: #333;
     }
 
     header {
-      background-color: #333;
+      background-color: #d84315; /* 寿司カラーに変更 */
       color: #fff;
       text-align: center;
       padding: 1em 0;
@@ -42,6 +42,7 @@
     }
 
     .artwork img {
+      display: none; /* 画像を非表示に変更 */
       max-width: 100%;
       height: auto;
       border-radius: 8px;
@@ -51,7 +52,7 @@
       padding: 10px 20px;
       font-size: 16px;
       cursor: pointer;
-      background-color: #333;
+      background-color: #d84315; /* 寿司カラーに変更 */
       color: #fff;
       border: none;
       border-radius: 4px;
@@ -60,7 +61,7 @@
     footer {
       text-align: center;
       padding: 1em 0;
-      background-color: #333;
+      background-color: #d84315; /* 寿司カラーに変更 */
       color: #fff;
       position: fixed;
       bottom: 0;
@@ -77,7 +78,6 @@
   <section>
     <h2>寿司注文アプリ（購入/管理）</h2>
     <div class="artwork">
-      <img src="https://tamapiko.github.io/scratch-kariru/sushi_order_app.jpg" alt="寿司注文アプリ">
       <p>細かな調整は管理用で行えます。寿司のオーダーと管理が簡単にできるアプリです。</p>
       <button onclick="openArtwork('order_app.html')">作品を表示</button>
     </div>
@@ -86,7 +86,6 @@
   <section>
     <h2>寿司注文アプリ管理用</h2>
     <div class="artwork">
-      <img src="https://tamapiko.github.io/scratch-kariru/sushi_order_admin.jpg" alt="寿司注文アプリ管理用">
       <p>注文データや在庫の管理が行えるアプリです。未処理の注文に✓のマークを付けたり、処理済みにすることができます。</p>
       <button onclick="openArtwork('order_admin.html')">作品を表示</button>
     </div>
@@ -95,14 +94,13 @@
   <section>
     <h2>寿司注文アプリレジ用</h2>
     <div class="artwork">
-      <img src="https://tamapiko.github.io/scratch-kariru/sushi_order_register.jpg" alt="寿司注文アプリレジ用">
       <p>レジ業務をサポートするアプリです。便利な機能が豊富に揃っています。</p>
       <button onclick="openArtwork('order_register.html')">作品を表示</button>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2023 寿司アプリ作品紹介</p>
+    <p></p>
   </footer>
 
   <script>
