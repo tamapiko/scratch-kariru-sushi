@@ -1,0 +1,16 @@
+{
+  "name": "寿司注文アプリ",
+  "short_name": "寿司注文",
+  "description": "さまざまな寿司アプリをお楽しみください",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fafafa",
+  "theme_color": "#4fc3f7",
+  "icons": [
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
