@@ -296,7 +296,7 @@ return new A(e,"base64").toString("binary")}:"object"==typeof t.base64js?functio
       scaffolding.setAccentColor("#ff4c4c");
 
       try {
-        scaffolding.addCloudProvider(new Scaffolding.Cloud.LocalStorageProvider("cloudvariables:941711032"));
+        scaffolding.addCloudProvider(new Scaffolding.Cloud.WebSocketProvider(["wss://clouddata.turbowarp.org","wss://clouddata.turbowarp.xyz"], "941102961"));
       } catch (error) {
         console.error(error);
       }
@@ -314,7 +314,7 @@ return new A(e,"base64").toString("binary")}:"object"==typeof t.base64js?functio
         enabled: true,
         warpTimer: false
       });
-      if (vm.renderer.setMaxTextureDimension) vm.renderer.setMaxTextureDimension(4096);
+      if (vm.renderer.setMaxTextureDimension) vm.renderer.setMaxTextureDimension(2048);
 
       if (typeof ScaffoldingAddons !== 'undefined') {
         ScaffoldingAddons.run(scaffolding, {"gamepad":false,"pointerlock":false,"specialCloudBehaviors":true,"unsafeCloudBehaviors":true,"pause":false});
