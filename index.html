@@ -1,22 +1,28 @@
-const CACHE_NAME = 'sushi-order-app-v1';
+<!DOCTYPE html>
+<html lang="ja">
 
-self.addEventListener('install', (event) => {
-  event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll([
-        '/',
-        '/favicon.ico',
-        '/apple-touch-icon.png',
-        /* ここにアプリで使用する他のファイルやURLを追加 */
-      ]);
-    })
-  );
-});
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>寿司注文</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <style>
+        /* (略) これ以降は先程のコードと同じです */
+    </style>
 
-self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request).then((response) => {
-      return response || fetch(event.request);
-    })
-  );
-});
+    <!-- PWA manifest -->
+    <link rel="manifest" href="/manifest.json">
+    <!-- Service Worker registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then((reg) => console.log('Service Worker registered with scope:', reg.scope))
+                .catch((error) => console.error('Service Worker registration failed:', error));
+        }
+    </script>
+</head>
+
+<!-- (略) これ以降は先程のコードと同じです -->
+
+</html>
